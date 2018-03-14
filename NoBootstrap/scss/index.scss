@@ -1,0 +1,524 @@
+$spaccing:1%;
+$section2Height:400px;
+$section3Padding:10%;
+$section4Height:600px;
+$section5Height:400px;
+
+/*--import font開始--*/
+@import url('https://fonts.googleapis.com/css?family=Raleway:300');
+/*--import font結束--*/
+* {
+    margin: 0;
+    padding: 0;
+    }
+/*-------------導覽列開始------------*/
+body{
+    padding-top:30px;
+}
+nav{
+    
+    img{
+        margin-left:10px;
+    }
+
+    .dropdown-menu{
+        background-color: black;        
+    }
+
+    .navbar-nav>li>a{
+        font-size:16px;
+    }
+
+    .dropdown-menu>li>a{
+        font-size:16px;
+        color:white;
+        margin-top:20px;
+        margin-bottom:20px;
+    }
+}
+/*------------導覽列結束---------*/
+
+/*----------section1開始----------*/
+#sec1{ 
+    
+    h1{
+        margin:0px;
+        padding: 0px;
+    }
+
+    .banner>img{
+    width:100%;
+    height: auto;
+    }
+
+    .subBanner{        
+        overflow:auto;
+        margin:$spaccing;
+        .sec1_1{
+            width:50% - $spaccing;
+            margin-right:$spaccing;
+            
+            float: left;
+            img{
+                width:100%;
+                height: auto;
+            }
+        }
+
+        .sec1_2{
+            width:50% - $spaccing;
+            
+            margin-left:$spaccing;
+            float:left;
+            img{
+                width:100%;
+                height: auto;
+            }
+        }
+
+        button{
+            padding:$spaccing * 2;
+            background-color: white;
+            color:black;
+            border:1px solid black;
+            margin-top: 5 * $spaccing;
+        }
+    }
+
+
+}
+/*----------section1結束----------*/
+
+/*----------For mobile section1 開始----------*/
+@media only screen and (max-width:768px){
+    #sec1{
+        .subBanner{
+            overflow: inherit;
+            .sec1_1,.sec1_2{
+                width:100%;
+                margin-right:0px;
+                float:none;
+                h3,p{
+                    margin: $spaccing * 3;
+                }
+                
+                button{
+                    margin: $spaccing * 3;
+                }
+            }
+        }
+    }
+}
+/*---------For mobile section1 結束-----------*/
+
+/*---------section2 開始-------------*/
+#sec2{
+    
+        background:url(../images1/sec2Banner.jpg);
+        height: $section2Height;        
+        background-size:100% auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        color:white;
+        text-align: center;
+        font:16px "Times New Roman", Times, serif;
+
+        h2{            
+            margin: $section2Height / 5 auto 0 auto;
+            display:inline-block;
+            overflow:hidden;            
+        }
+
+        p{
+            width:50%;
+            margin:20px auto;
+        }
+    
+}
+/*---------section2 結束-------------*/
+
+
+/*----------For mobile section2 開始----------*/
+@media only screen and (max-width:768px){
+    #sec2{
+        h2{
+            margin: 40px auto 0 auto;
+        }
+    }
+}
+/*---------For mobile section2 結束-----------*/
+
+
+/*---------section3 開始-------------*/
+#sec3{
+    width:100%;
+    background-color: white;    
+    padding: $section3Padding;
+    
+    
+
+    h2{
+        font-family: 'Raleway', sans-serif;
+        font-size: 40px;
+    }
+    p{
+        font-family: 'Raleway', sans-serif;
+        line-height: 2em;
+        font-size: 1.3em;
+    }
+
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        
+    }
+
+    .sec3_1,.sec3_2,.sec3_3,.sec3_4{
+        
+        h3{
+            width:80px;
+            height:80px;
+            margin-bottom: 50px;
+        }
+
+        p{
+            line-height: 1.5em;
+            font-size: 1em;
+        }
+    }
+
+    
+}
+
+
+/*---------section3 結束-------------*/
+
+/*----------For mobile section3 開始----------*/
+@media only screen and (max-width:768px){
+    #sec3{
+        .grid-container{
+            grid-template-columns: auto;
+        }
+    }
+}
+/*---------For mobile section3 結束-----------*/
+
+
+/*---------section4 開始-------------*/
+#sec4{
+    background-color: white;
+    background-image: url(../images1/sec4Banner.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 120% auto;
+    height: $section4Height;
+    
+    h2,p{
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #555555;
+    }
+
+    h2{
+        font-size: 3.5em;
+        line-height: 2em;
+        padding-top: $section4Height / 7;
+    }
+    p{
+        font-size:1em;
+    }
+    .imageContainer{        
+        
+        margin: 30px auto 0px auto;
+        
+        width:40%; 
+        
+        >div{
+            display:inline-block;
+            vertical-align:bottom;
+            overflow: auto;
+        }
+
+        div.float{
+           float:left;           
+           width:50%;
+           box-sizing: border-box;
+           padding-left:10%;
+            img{
+                width:100%;
+            }
+            p{
+                text-align: center;
+                font-size: 1.5em;
+                line-height: 2em;
+                color: black;
+            }
+        }
+    }
+
+    
+}
+/*---------section4 結束-------------*/
+
+/*----------For mobile section4 開始----------*/
+@media only screen and (max-width:768px){
+    #sec4{
+        background-size: 300% auto;
+        h2{
+            font-size: 1.5em;
+            line-height: 1em;
+            padding-top: $section4Height / 6;
+            
+        }
+        p{
+            font-size:0.7em;
+            width:60%;
+            margin: 0 auto;
+        }
+
+        .imageContainer{
+            div.float p{
+                text-align: center;
+                font-size: 0.5em;
+                line-height: 2em;
+                color: black; 
+            }
+        }
+        
+    }
+}
+/*---------For mobile section4 結束-----------*/
+
+
+/*---------section5 開始-------------*/
+#sec5{
+    
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #555555;    
+    
+    
+
+    .outer{              
+       
+        padding-top:$section5Height/5; 
+        padding-bottom: $section5Height/5
+        
+        
+    }
+    .outer>h2{
+       
+        font-size: 3.0em;
+    }
+
+    .outer>p{
+        font-size: 1.0em;
+    }
+
+    .flex-inner{
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 30px;
+        p{            
+            width:15%;
+        }
+    }    
+}
+
+
+/*---------section5 結束-------------*/
+
+/*----------For mobile section5 開始----------*/
+@media only screen and (max-width:768px){
+    #sec5{
+        .flex-inner{
+            p{
+                width:initial;
+                flex:30%;
+            }
+        }
+        .outer>h2{
+       
+            font-size: 2.0em;
+        }
+    }
+}
+/*---------For mobile section5 結束-----------*/
+
+
+/*-----------section6 開始----------------*/
+#sec6{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    section{
+        flex:25%;
+        background-color: grey;
+        padding-top:200px;
+        padding-bottom:30px;
+        text-align: center;        
+        font-size:1.2em;
+        background-repeat: no-repeat;
+
+        header{
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+        }
+    }
+
+    .sec6_1{
+        background-image: url(../images1/sec6_1.jpg); 
+        background-size: 150% auto;
+        background-position: center;
+    }
+
+    .sec6_2{
+        background-image: url(../images1/sec6_2.jpg); 
+        background-size: 200% auto;
+        background-position: center;
+    }
+
+    .sec6_3{
+        background-image: url(../images1/sec6_3.jpg);         
+        background-size: 150% auto;
+        background-position: center;
+    }
+
+    .sec6_4{
+        background-image: url(../images1/sec6_4.jpg); 
+        background-size: 150% auto;
+        background-position: center;
+    }
+    
+}
+/*-----------section6 結束----------------*/
+
+/*----------For mobile section6 開始----------*/
+@media only screen and (max-width:1024px){
+    #sec6{
+        flex-wrap: wrap; 
+        section{
+            flex:50%;
+            padding-top:150px;
+            padding-bottom:20px;
+            font-size:1em;
+        }
+    }
+}
+
+/*---------For mobile section5 結束-----------*/
+
+
+
+/*-----------section7 開始----------------*/
+#sec7{
+    display:flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #333333;
+    padding:50px 150px;
+    font-size:0.6em;
+    header{
+        color:white;
+        margin-bottom: 20px;
+    }
+
+    section{
+        
+        background-color: #333333;
+    }
+
+    section.sec7_1,section.sec7_2,section.sec7_2,section.sec7_3,section.sec7_4{
+        flex:15%;
+    }
+    section.sec7_5{
+        flex:40%;
+        li{
+            float:left;
+            margin-right:5px;
+        }
+    }
+
+    li{
+        color:#777777;
+        padding:5px 0px;
+    }
+
+    ul{
+        list-style-type: none;
+    }
+
+    input[type ~= text]{
+        
+        border-style: solid;
+        border-color: #777777;
+        border-width: 1px;
+        background-color: #444444;
+        font-size: 16px;
+        padding: 5px;
+        color: white;
+    }
+
+    input[type ~= button]{
+        border:solid #777777 1px;
+        padding:5px 15px;
+        margin-left:5px;
+        font-size:13px;
+    }
+
+
+    form{
+        p{
+            margin-top:10px;
+            color:#777777;
+        }
+        
+        
+    }
+    img[alt ~= facebook],img[alt ~= twitter],img[alt ~= youtube],img[alt ~= googlePlus]{
+        width:20px;
+        height: 20px;
+    }
+    
+    
+}
+/*-----------section7 結束----------------*/
+
+/*----------For mobile section7 開始----------*/
+@media only screen and (max-width:1024px){
+    #sec7{
+        flex-wrap: wrap; 
+        section.sec7_1,section.sec7_2,section.sec7_2,section.sec7_3,section.sec7_4,section.sec7_5{
+            flex:30%;
+        }
+    }
+}
+
+@media only screen and (max-width:600px){
+    #sec7{
+        flex-wrap: wrap; 
+        padding:50px 50px;
+        section.sec7_1,section.sec7_2,section.sec7_2,section.sec7_3,section.sec7_4,section.sec7_5{
+            flex:100%;
+            header{
+                border-bottom:#777777 solid 1px;
+                padding:10px;
+            }
+            ul{
+                margin-left: 30px;
+                li{
+                    border-bottom:#777777 solid 1px;
+                    padding: 12px 6px 6px 0px; 
+                }
+            }
+        }
+    }
+}
+
+/*---------For mobile section7 結束-----------*/
+
